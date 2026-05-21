@@ -27,7 +27,7 @@ export class CompressPdfComponent {
     formData.append('targetKb', this.targetKb.toString());
 
     try {
-      const response = await fetch('http://localhost:8080/api/pdf/compress', {
+      const response = await fetch('https://pdftools-backend-oyxw.onrender.com/api/pdf/compress', {
         method: 'POST',
         body: formData,
       });
