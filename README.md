@@ -1,27 +1,116 @@
-# ILovePdfFrontend
+# iLovePDF Clone Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+Frontend desarrollado con Angular para una plataforma tipo iLovePDF que permite trabajar con archivos PDF de forma online.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Características
 
-## Code scaffolding
+- 📄 Comprimir PDF
+- 🔗 Unir PDF
+- ✂️ Dividir PDF
+- 📱 Diseño responsive
+- 🍪 Consentimiento de cookies GDPR
+- 📢 Preparado para integración de anuncios
+- ⚡ Arquitectura SPA con Angular Router
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🛠️ Tecnologías utilizadas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Angular 15
+- TypeScript
+- HTML5
+- CSS3
+- Angular Router
+- RxJS
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 📁 Estructura del proyecto
 
-## Running end-to-end tests
+````text
+src/
+ └── app/
+      ├── components/
+      │    ├── header/
+      │    ├── footer/
+      │    ├── ad-banner/
+      │    └── cookie-banner/
+      │
+      ├── pages/
+      │    ├── home/
+      │    ├── compress-pdf/
+      │    ├── merge-pdf/
+      │    ├── split-pdf/
+      │    ├── privacy/
+      │    ├── terms/
+      │    └── support/
+      │
+      ├── app-routing.module.ts
+      └── app.module.ts
+      ```
+````
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+⚙️ Requisitos
+Node.js 16+
+npm
+Angular CLI 15
+📦 Instalación
 
-## Further help
+1. Clonar repositorio
+   git clone <url-del-repositorio>
+2. Entrar al proyecto
+   cd iLovePdf-Frontend
+3. Instalar dependencias
+   npm install
+4. Ejecutar proyecto
+   ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Abrir en:
+
+http://localhost:4200
+
+🧭 Rutas principales
+Ruta Descripción
+/ Inicio
+/compress-pdf Comprimir PDF
+/merge-pdf Unir PDFs
+/split-pdf Dividir PDF
+/privacy Política de privacidad
+/terms Términos y condiciones
+/support Soporte
+📢 Publicidad
+
+El proyecto está preparado para integrar anuncios como:
+
+Google AdSense
+
+Componente:
+
+components/ad-banner
+🍪 GDPR / Cookies
+
+Incluye:
+
+Banner de consentimiento de cookies
+Guardado en localStorage
+Preparado para Google Analytics y AdSense
+📱 Responsive
+Menú hamburguesa en móvil
+Layout adaptable
+Dropdown funcional en desktop y móvil
+🔮 Próximas mejoras
+Login / registro
+Subida real de archivos
+Backend con Spring Boot
+Motor PDF con Python
+Dark mode
+Drag & drop avanzado
+🧱 Arquitectura futura
+frontend-angular
+backend-springboot
+pdf-engine-python
+📄 Licencia
+
+Proyecto educativo/demo inspirado en herramientas de procesamiento de PDF.

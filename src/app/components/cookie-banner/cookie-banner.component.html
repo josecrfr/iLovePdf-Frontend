@@ -1,0 +1,26 @@
+<div class="cookie-overlay" *ngIf="showBanner">
+
+  <div class="cookie-banner">
+
+    <h3>Cookies y privacidad</h3>
+
+    <p>
+      Utilizamos cookies para mejorar la experiencia del usuario,
+      analizar el tráfico y mostrar anuncios personalizados.
+    </p>
+
+    <div class="buttons">
+
+      <button class="accept-btn" (click)="acceptCookies()">
+        Aceptar
+      </button>
+
+      <button class="reject-btn" (click)="rejectCookies()">
+        Rechazar
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

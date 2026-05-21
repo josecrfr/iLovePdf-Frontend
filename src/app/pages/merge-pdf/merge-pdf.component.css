@@ -1,0 +1,61 @@
+.merge-container {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+  background: #f5f7fb;
+  /* min-height: 100vh; */
+  text-align: center;
+}
+
+h1 {
+  color: #d32f2f;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.upload-box {
+  border: 2px dashed #d32f2f;
+  padding: 40px;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+.upload-box:hover {
+  background: #fff5f5;
+}
+
+.files-list {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  text-align: left;
+}
+
+.file-item {
+  background: white;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.merge-btn {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.merge-btn:hover {
+  background: #b71c1c;
+}

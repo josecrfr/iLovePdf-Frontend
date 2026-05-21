@@ -1,0 +1,29 @@
+<div class="container">
+
+    <header class="hero">
+        <h1>PDFTools</h1>
+        <p>Herramientas rápidas para trabajar con PDF de forma sencilla</p>
+    </header>
+
+    <app-ad-banner></app-ad-banner>
+
+    <section class="tools">
+
+        <div class="tool-card" (click)="navigateTo('compress-pdf')">
+            <h3>Comprimir PDF</h3>
+            <p>Reduce el tamaño de tus archivos PDF</p>
+        </div>
+
+        <div class="tool-card" (click)="navigateTo('merge-pdf')">
+            <h3>Unir PDF</h3>
+            <p>Combina varios PDFs en uno solo</p>
+        </div>
+
+        <div class="tool-card" (click)="navigateTo('split-pdf')">
+            <h3>Dividir PDF</h3>
+            <p>Separa páginas en diferentes archivos</p>
+        </div>
+
+    </section>
+
+</div>

@@ -1,0 +1,51 @@
+<header class="header">
+
+  <!-- LOGO -->
+  <div class="logo">
+    <span routerLink="/">PDFTools</span>
+  </div>
+
+  <!-- MOBILE BUTTON -->
+  <div class="mobile-menu-btn" (click)="toggleMobileMenu()">
+    ☰
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" [class.mobile-open]="mobileMenuOpen">
+
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenus()">
+      Inicio
+    </a>
+
+    <!-- DROPDOWN -->
+    <div class="dropdown">
+
+      <span class="drop-title" (click)="toggleDropdown($event)">
+        Herramientas ▼
+      </span>
+
+      <div class="dropdown-content" *ngIf="toggleTools">
+
+        <a routerLink="/compress-pdf" (click)="closeMenus()">
+          Comprimir PDF
+        </a>
+
+        <a routerLink="/merge-pdf" (click)="closeMenus()">
+          Unir PDF
+        </a>
+
+        <a routerLink="/split-pdf" (click)="closeMenus()">
+          Dividir PDF
+        </a>
+
+      </div>
+
+    </div>
+
+    <a routerLink="/support" routerLinkActive="active" (click)="closeMenus()">
+      Soporte
+    </a>
+
+  </nav>
+
+</header>

@@ -1,0 +1,29 @@
+<div class="compress-container">
+
+  <h1>Comprimir PDF</h1>
+  <p>Reduce el tamaño de tus archivos PDF definiendo un peso objetivo</p>
+  <app-ad-banner></app-ad-banner>
+  <div class="upload-box">
+    <input type="file" />
+    <p>Arrastra aquí tu archivo PDF o haz clic para seleccionarlo</p>
+  </div>
+
+  <div class="settings">
+
+    <label for="targetSize">
+      Tamaño objetivo (KB):
+    </label>
+
+    <input id="targetSize" type="number" min="50" placeholder="Ej: 128" />
+
+  </div>
+
+  <div class="info">
+    <small>
+      El sistema intentará reducir el PDF al tamaño indicado (puede variar ligeramente según contenido).
+    </small>
+  </div>
+
+  <button class="action-btn">Comprimir PDF</button>
+
+</div>
