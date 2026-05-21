@@ -2,19 +2,27 @@
 
   <h1>Comprimir PDF</h1>
   <p>Reduce el tamaño de tus archivos PDF definiendo un peso objetivo</p>
+
   <app-ad-banner></app-ad-banner>
+
   <div class="upload-box">
-    <input type="file" />
+    <input type="file" (change)="onFileSelected($event)" />
     <p>Arrastra aquí tu archivo PDF o haz clic para seleccionarlo</p>
   </div>
 
   <div class="settings">
 
-    <label for="targetSize">
+    <label for="targetKb">
       Tamaño objetivo (KB):
     </label>
 
-    <input id="targetSize" type="number" min="50" placeholder="Ej: 128" />
+    <input
+      id="targetKb"
+      type="number"
+      min="50"
+      placeholder="Ej: 128"
+      [(ngModel)]="targetKb"
+    />
 
   </div>
 
@@ -24,6 +32,8 @@
     </small>
   </div>
 
-  <button class="action-btn">Comprimir PDF</button>
+  <button class="action-btn" (click)="compressPdf()" [disabled]="!file || !targetKb">
+    Comprimir PDF
+  </button>
 
 </div>
