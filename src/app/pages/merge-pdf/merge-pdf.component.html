@@ -2,21 +2,28 @@
 
   <h1>Unir PDFs</h1>
   <p>Sube varios archivos y combínalos en uno solo</p>
+
   <app-ad-banner></app-ad-banner>
+
   <div class="upload-box">
-    <input type="file" multiple />
+    <input type="file" multiple (change)="onFilesSelected($event)" />
     <p>Arrastra aquí tus archivos o haz clic para seleccionar</p>
   </div>
 
   <div class="files-list">
-    <div class="file-item">
-      Documento1.pdf
-    </div>
-    <div class="file-item">
-      Documento2.pdf
+    <div class="file-item" *ngFor="let file of files; let i = index">
+      
+      <span>{{ file.name }}</span>
+
+      <button class="remove-btn" (click)="removeFile(i)">
+        ✕
+      </button>
+
     </div>
   </div>
 
-  <button class="merge-btn">Unir PDFs</button>
+  <button class="merge-btn" (click)="mergePdfs()" [disabled]="files.length < 2">
+    Unir PDFs
+  </button>
 
 </div>
