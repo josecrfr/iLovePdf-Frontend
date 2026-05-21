@@ -15,6 +15,7 @@ import { SupportComponent } from './pages/support/support.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CookieBannerComponent } from './components/cookie-banner/cookie-banner.component';
 import { AdBannerComponent } from './components/ad-banner/ad-banner.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,14 +30,15 @@ import { AdBannerComponent } from './components/ad-banner/ad-banner.component';
     SupportComponent,
     HeaderComponent,
     CookieBannerComponent,
-    AdBannerComponent
+    AdBannerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
