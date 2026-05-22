@@ -9,6 +9,8 @@ import { FileDownloadUtil } from 'src/app/utils/file-download.util';
 export class MergePdfComponent {
   files: File[] = [];
 
+  loading = false;
+
   onFilesSelected(event: any) {
     const selectedFiles: FileList = event.target.files;
 
@@ -26,6 +28,7 @@ export class MergePdfComponent {
   }
 
   async mergePdfs() {
+    this.loading = true;
     const formData = new FormData();
 
     this.files.forEach((file) => {
@@ -47,6 +50,8 @@ export class MergePdfComponent {
       FileDownloadUtil.downloadBlob(blob, 'merged-result.pdf');
     } catch (error) {
       console.error('Error al unir PDFs:', error);
+    } finally {
+      this.loading = false;
     }
   }
 }

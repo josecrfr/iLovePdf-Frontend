@@ -1,5 +1,8 @@
 <div class="compress-container">
-
+  <div class="loading-overlay" *ngIf="loading">
+    <div class="spinner"></div>
+    <p>Comprimiendo PDF...</p>
+  </div>
   <h1>Comprimir PDF</h1>
   <p>Reduce el tamaño de tus archivos PDF definiendo un peso objetivo</p>
 
@@ -16,13 +19,7 @@
       Tamaño objetivo (KB):
     </label>
 
-    <input
-      id="targetKb"
-      type="number"
-      min="50"
-      placeholder="Ej: 128"
-      [(ngModel)]="targetKb"
-    />
+    <input id="targetKb" type="number" min="50" placeholder="Ej: 128" [(ngModel)]="targetKb" />
 
   </div>
 
