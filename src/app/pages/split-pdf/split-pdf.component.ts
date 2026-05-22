@@ -13,6 +13,9 @@ export class SplitPdfComponent {
   mode: string = 'EVERY_PAGE';
 
   range: string = '';
+
+  loading = false;
+
   constructor(private splitService: SplitService) {}
 
   /**
@@ -39,6 +42,7 @@ export class SplitPdfComponent {
       alert('Selecciona un PDF primero');
       return;
     }
+    this.loading = true;
     try {
       const blob = await this.splitService.splitPdf(
         this.file,
@@ -49,6 +53,8 @@ export class SplitPdfComponent {
       FileDownloadUtil.downloadBlob(blob, 'split-result.zip');
     } catch (error) {
       console.error('Error al dividir PDF:', error);
+    } finally {
+      this.loading = false;
     }
   }
 }

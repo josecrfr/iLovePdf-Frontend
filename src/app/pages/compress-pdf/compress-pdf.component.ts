@@ -10,6 +10,8 @@ export class CompressPdfComponent {
   file: File | null = null;
   targetKb: number | null = null;
 
+  loading = false;
+
   onFileSelected(event: any) {
     const selectedFile: File = event.target.files[0];
 
