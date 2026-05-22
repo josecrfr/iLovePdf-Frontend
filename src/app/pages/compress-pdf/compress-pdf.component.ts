@@ -22,7 +22,7 @@ export class CompressPdfComponent {
 
   async compressPdf() {
     if (!this.file || !this.targetKb) return;
-
+    this.loading = true;
     const formData = new FormData();
 
     formData.append('file', this.file);
@@ -43,6 +43,8 @@ export class CompressPdfComponent {
       FileDownloadUtil.downloadBlob(blob, 'compress-result.pdf');
     } catch (error) {
       console.error('Error al comprimir PDF:', error);
+    } finally {
+      this.loading = false;
     }
   }
 }
