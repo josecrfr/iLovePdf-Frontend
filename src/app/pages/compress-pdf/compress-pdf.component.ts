@@ -22,17 +22,20 @@ export class CompressPdfComponent {
 
   async compressPdf() {
     if (!this.file || !this.targetKb) return;
-
+    this.loading = true;
     const formData = new FormData();
 
     formData.append('file', this.file);
     formData.append('targetKb', this.targetKb.toString());
 
     try {
-      const response = await fetch('https://pdftools-backend-oyxw.onrender.com/api/pdf/compress', {
-        method: 'POST',
-        body: formData,
-      });
+      const response = await fetch(
+        'https://pdftools-backend-oyxw.onrender.com/api/pdf/compress',
+        {
+          method: 'POST',
+          body: formData,
+        },
+      );
 
       if (!response.ok) {
         throw new Error(`Error HTTP: ${response.status}`);
@@ -43,6 +46,8 @@ export class CompressPdfComponent {
       FileDownloadUtil.downloadBlob(blob, 'compress-result.pdf');
     } catch (error) {
       console.error('Error al comprimir PDF:', error);
+    } finally {
+      this.loading = false;
     }
   }
 }
