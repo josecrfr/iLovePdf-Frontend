@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class MergedService {
 
-  private apiURL = 'https://pdftools-backend-oyxw.onrender.com/api/pdf/merge';
+  private apiURL = 'https://pdftools-backend-gzr1.onrender.com/api/pdf/merge';
 
   /**
    * Une varios PDFs y devuelve un PDF final

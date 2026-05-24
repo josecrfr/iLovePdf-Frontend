@@ -30,7 +30,7 @@ export class CompressPdfComponent {
 
     try {
       const response = await fetch(
-        'https://pdftools-backend-oyxw.onrender.com/api/pdf/compress',
+        'https://pdftools-backend-gzr1.onrender.com/api/pdf/compress',
         {
           method: 'POST',
           body: formData,

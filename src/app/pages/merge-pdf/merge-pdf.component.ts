@@ -36,7 +36,7 @@ export class MergePdfComponent {
     });
 
     try {
-      const response = await fetch('http://localhost:8080/api/pdf/merge', {
+      const response = await fetch('https://pdftools-backend-gzr1.onrender.com/api/pdf/merge', {
         method: 'POST',
         body: formData,
       });

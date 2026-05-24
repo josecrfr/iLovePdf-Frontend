@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class SplitService {
-  private apiURL = 'https://pdftools-backend-oyxw.onrender.com/api/pdf/split';
+  private apiURL = 'https://pdftools-backend-gzr1.onrender.com/api/pdf/split';
 
   /**
    * Divide un PDF y devuelve un ZIP
